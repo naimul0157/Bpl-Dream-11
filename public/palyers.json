@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "player_name": "Shakib Al Hasan",
+    "player_country": "Bangladesh",
+    "player_playing_role": "All-Rounder",
+    "rating": 9.8,
+    "batting_hand": "Left-Hand",
+    "price": 1800000,
+    "img": "https://i.ibb.co/vvQvNX50/AP23252428810961-1727346092.webp"
+  },
+  {
+    "id": 2,
+    "player_name": "Tamim Iqbal",
+    "player_country": "Bangladesh",
+    "player_playing_role": "Opening Batsman",
+    "rating": 9.6,
+    "batting_hand": "Left-Hand",
+    "price": 1700000,
+    "img": "https://i.ibb.co/GvRtt5jd/tamim-iqbal-240142217-16x9.webp"
+  },
+  {
+    "id": 3,
+    "player_name": "Litton Das",
+    "player_country": "Bangladesh",
+    "player_playing_role": "Wicket Keeper Batsman",
+    "rating": 9.4,
+    "batting_hand": "Right-Hand",
+    "price": 1650000,
+    "img": "https://www.thedailystar.net/sites/default/files/styles/big_1/public/images/2024/09/17/liton_das.jpg"
+  },
+  {
+    "id": 4,
+    "player_name": "Mustafizur Rahman",
+    "player_country": "Bangladesh",
+    "player_playing_role": "Bowler",
+    "rating": 9.5,
+    "batting_hand": "Left-Hand",
+    "price": 1750000,
+    "img": "https://img1.hscicdn.com/image/upload/f_auto/lsci/db/PICTURES/CMS/383500/383539.6.jpg"
+  },
+  {
+    "id": 5,
+    "player_name": "Mahmudullah Riyad",
+    "player_country": "Bangladesh",
+    "player_playing_role": "All-Rounder",
+    "rating": 9.2,
+    "batting_hand": "Right-Hand",
+    "price": 1600000,
+    "img": "https://thereport.live/media/imgAll/2024July/624C2BEF-670D-4400-BD94-EB9BA2EDCCAB-20241008163905.webp"
+  },
+  {
+    "id": 6,
+    "player_name": "Taskin Ahmed",
+    "player_country": "Bangladesh",
+    "player_playing_role": "Fast Bowler",
+    "rating": 9.1,
+    "batting_hand": "Right-Hand",
+    "price": 1500000,
+    "img": "https://static.cricbuzz.com/a/img/v1/1080x608/i1/c812014/taskin-ahmed-recently-played-for-sharjah-warrorz-in-the-ilt20.jpg"
+  },
+  {
+    "id": 7,
+    "player_name": "Andre Russell",
+    "player_country": "West Indies",
+    "player_playing_role": "All-Rounder",
+    "rating": 9.9,
+    "batting_hand": "Right-Hand",
+    "price": 2200000,
+    "img": "https://static.cricbuzz.com/a/img/v1/1080x608/i1/c783079/russell-headlines-big-name-cuts-ahead-of-mini-auction.jpg"
+  },
+  {
+    "id": 8,
+    "player_name": "Rashid Khan",
+    "player_country": "Afghanistan",
+    "player_playing_role": "Leg Spinner",
+    "rating": 9.9,
+    "batting_hand": "Right-Hand",
+    "price": 2300000,
+    "img": "https://ecdn.dhakatribune.net/contents/cache/images/640x359x1/uploads/media/2023/10/10/rasid-a583b2e663be5ee46946ba4044b595b9.jpg?jadewits_media_id=6394"
+  },
+  {
+    "id": 9,
+    "player_name": "David Miller",
+    "player_country": "South Africa",
+    "player_playing_role": "Middle Order Batsman",
+    "rating": 9.4,
+    "batting_hand": "Left-Hand",
+    "price": 1900000,
+    "img": "https://static.cricketaddictor.com/images/posts/2025/FotoJet-4--155.webp?q=80&width=768&height=403"
+  },
+  {
+    "id": 10,
+    "player_name": "Babar Azam",
+    "player_country": "Pakistan",
+    "player_playing_role": "Top Order Batsman",
+    "rating": 9.8,
+    "batting_hand": "Right-Hand",
+    "price": 2400000,
+    "img": "https://ecdn.dhakatribune.net/contents/cache/images/640x359x1/uploads/media/2026/03/04/d92b210a882211aed740d36defd8154e-69a83c9f5d6a3.jpg?jadewits_media_id=61300"
+  },
+  {
+    "id": 11,
+    "player_name": "Wanindu Hasaranga",
+    "player_country": "Sri Lanka",
+    "player_playing_role": "All-Rounder",
+    "rating": 9.5,
+    "batting_hand": "Right-Hand",
+    "price": 2100000,
+    "img": "https://resources.cricket-australia.pulselive.com/photo-resources/2026/02/10/4ace1fbf-d58c-4707-bf85-8aae0ceda938/Wanindu-Hasaranga.jpg?width=950&height=535"
+  },
+  {
+    "id": 12,
+    "player_name": "Faf du Plessis",
+    "player_country": "South Africa",
+    "player_playing_role": "Top Order Batsman",
+    "rating": 9.3,
+    "batting_hand": "Right-Hand",
+    "price": 2000000,
+    "img": "https://static.toiimg.com/thumb/msid-121842740,width-1280,height-720,resizemode-4/121842740.jpg"
+  }
+]
