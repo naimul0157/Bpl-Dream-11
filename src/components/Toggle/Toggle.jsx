@@ -7,10 +7,10 @@ const Toggle = ({setToggle, toggle, countSelect}) => {
                     Avialable Players
                 </h1>
                 <div>
-                    <button onClick={()=>setToggle(true)} className={`border border-r-0 px-4 py-2 border-gray-400 rounded-l-md ${toggle === true?"bg-green-400":""}`}>
+                    <button onClick={()=>setToggle(true)} className={`border border-r-0 px-4 py-2 border-gray-400 cursor-pointer rounded-l-md ${toggle === true?"bg-green-400":""}`}>
                         Avialable
                     </button>
-                    <button onClick={()=> setToggle(false)} className={`border border-l-0 px-4 py-2 border-gray-400 rounded-r-md ${toggle === false ? 'bg-green-400':''}`}>Selected <span>({countSelect})</span></button>
+                    <button onClick={()=> setToggle(false)} className={`border border-l-0 px-4 py-2 border-gray-400 rounded-r-md cursor-pointer ${toggle === false ? 'bg-green-400':''}`}>Selected <span>({countSelect})</span></button>
                 </div>
             </div>
         </div>

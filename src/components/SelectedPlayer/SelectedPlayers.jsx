@@ -16,7 +16,7 @@ const SelectedPlayers = ({ selectPlayer }) => {
                 </div>
             </div>
             <div className='w-1/6 flex justify-center'>
-                <img src={Dustbin} alt=""/>
+                <img className='cursor-pointer' src={Dustbin} alt=""/>
             </div>
         </div>
     );
