@@ -2,20 +2,21 @@ import { useState } from 'react';
 import flag from '../../assets/report 1.png'
 // import AvialablePlayers from '../AvialabePlayerS/AvialablePlayers';
 // import sakib from '../../assets/'
-const Player = ({ palyer, setAvialableBalance, avilableBalance, countSelect, setCountSelect }) => {
+const Player = ({ palyer, setAvialableBalance, avilableBalance, countSelect, setCountSelect, SelectedPlayers }) => {
     const [ChoseBtn, SetchoseBtn] = useState(false)
     const { player_name, player_country, player_playing_role, batting_hand, price, img, rating } = palyer
     function handleBUtton(PlayerParameter) {
         SetchoseBtn(true);
-            (avilableBalance >= 0 ? setAvialableBalance(avilableBalance - PlayerParameter)
+            (avilableBalance > 0 ? setAvialableBalance(avilableBalance - PlayerParameter)
          || setCountSelect(countSelect + 1) : alert('insufficient balance'));
+         SelectedPlayers(palyer);
 
     }
     return (
         <div>
             <div className="card border border-teal-600">
                 <figure>
-                    <img className='h-200px'
+                    <img className='w-full h-50 object-contain'
                         src={img}
                         alt="Shoes" />
                 </figure>
@@ -49,7 +50,7 @@ const Player = ({ palyer, setAvialableBalance, avilableBalance, countSelect, set
                         <h2>
                             Price:${price}
                         </h2>
-                        <button disabled={ChoseBtn || avilableBalance<=0 || countSelect==4} onClick={() => {
+                        <button disabled={ChoseBtn || countSelect==6 && avilableBalance<=0} onClick={() => {
                             handleBUtton(price)
                         }
 

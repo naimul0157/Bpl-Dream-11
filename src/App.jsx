@@ -4,12 +4,19 @@ import './App.css'
 import Navbar from './components/Navbar/Navbar'
 import AvialablePlayers from './components/AvialabePlayerS/AvialablePlayers';
 import Toggle from './components/Toggle/Toggle';
-import Selected from './components/SelectedPlayer/Selected';
+import Selected from './components/SelectedPlayers/Selected';
 const PromiseFetchPlayer = fetch('/public/palyers.json').then(res=> res.json());
 function App() {
   const [toggle, setToggle] = useState(true);
   const[avilableBalance, setAvialableBalance] = useState(10000000);
   const [countSelect, setCountSelect] = useState(0);
+  // use state for storing selected data
+  const [selectedData, setSelectedData] = useState([]);
+  const SelectedPlayers = (palyer)=>{
+    const newSelectPlayer = [...selectedData, palyer];
+    setSelectedData(newSelectPlayer);
+
+  }
   return (
     <>
     <Navbar avilableBalance={avilableBalance}></Navbar>
@@ -18,8 +25,9 @@ function App() {
       toggle === true ? 
     <Suspense fallback={<span className="loading loading-spinner loading-xl"></span>}>
        <AvialablePlayers PromiseFetchPlayer={PromiseFetchPlayer} setAvialableBalance={setAvialableBalance}
-       avilableBalance={avilableBalance} countSelect={countSelect} setCountSelect={setCountSelect}></AvialablePlayers>
-    </Suspense> : <Suspense fallback={<span className="loading loading-spinner loading-xl"></span>}><Selected></Selected></Suspense>
+       avilableBalance={avilableBalance} countSelect={countSelect} setCountSelect={setCountSelect}
+       SelectedPlayers={SelectedPlayers}></AvialablePlayers>
+    </Suspense> : <Suspense fallback={<span className="loading loading-spinner loading-xl"></span>}><Selected selectedData={selectedData}></Selected></Suspense>
     }
     </>
   )
