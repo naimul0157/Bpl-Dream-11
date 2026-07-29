@@ -2,7 +2,7 @@
 const Toggle = ({setToggle, toggle, countSelect}) => {
     return (
         <div className="w-4/5 mx-auto">
-            <div className="flex justify-between my-3 items-center">
+            <div className="md:flex justify-between my-3 items-center">
                 <h1 className="font-bold text-2xl">
                     Avialable Players
                 </h1>

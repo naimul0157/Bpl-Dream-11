@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import flag from '../../assets/report 1.png'
+// import AvialablePlayers from '../AvialabePlayerS/AvialablePlayers';
 // import sakib from '../../assets/'
 const Player = ({ palyer, setAvialableBalance, avilableBalance, countSelect, setCountSelect }) => {
     const [ChoseBtn, SetchoseBtn] = useState(false)
     const { player_name, player_country, player_playing_role, batting_hand, price, img, rating } = palyer
     function handleBUtton(PlayerParameter) {
-        SetchoseBtn(true)
-        setAvialableBalance(avilableBalance - PlayerParameter);
-        setCountSelect(countSelect + 1);
+        SetchoseBtn(true);
+            (avilableBalance >= 0 ? setAvialableBalance(avilableBalance - PlayerParameter)
+         || setCountSelect(countSelect + 1) : alert('insufficient balance'));
 
     }
     return (
@@ -48,10 +49,8 @@ const Player = ({ palyer, setAvialableBalance, avilableBalance, countSelect, set
                         <h2>
                             Price:${price}
                         </h2>
-                        <button disabled={ChoseBtn} onClick={() => {
-                                handleBUtton(price)
-
-
+                        <button disabled={ChoseBtn || avilableBalance<=0 || countSelect==4} onClick={() => {
+                            handleBUtton(price)
                         }
 
                         } className={`btn border-gray-400 ${ChoseBtn && `bg-green-400`}`}>{ChoseBtn ? "Cosed" : 'Chose Player'}</button>
