@@ -1,12 +1,15 @@
 import { useState } from 'react';
 import flag from '../../assets/report 1.png'
 // import sakib from '../../assets/'
-const Player = ({ palyer }) => {
+const Player = ({ palyer, setAvialableBalance, avilableBalance, countSelect, setCountSelect }) => {
     const [ChoseBtn, SetchoseBtn] = useState(false)
-     const handleChosePlayerBtn = ()=>{
-        SetchoseBtn(!ChoseBtn);
-     }
     const { player_name, player_country, player_playing_role, batting_hand, price, img, rating } = palyer
+    function handleBUtton(PlayerParameter) {
+        SetchoseBtn(true)
+        setAvialableBalance(avilableBalance - PlayerParameter);
+        setCountSelect(countSelect + 1);
+
+    }
     return (
         <div>
             <div className="card border border-teal-600">
@@ -45,7 +48,13 @@ const Player = ({ palyer }) => {
                         <h2>
                             Price:${price}
                         </h2>
-                        <button disabled={ChoseBtn}  onClick={handleChosePlayerBtn} className={`btn border-gray-400 ${ChoseBtn && `bg-green-400`}`}>{ChoseBtn?"Cosed": 'Chose Player'}</button>
+                        <button disabled={ChoseBtn} onClick={() => {
+                                handleBUtton(price)
+
+
+                        }
+
+                        } className={`btn border-gray-400 ${ChoseBtn && `bg-green-400`}`}>{ChoseBtn ? "Cosed" : 'Chose Player'}</button>
                     </div>
                 </div>
             </div>
