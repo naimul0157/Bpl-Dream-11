@@ -6,7 +6,7 @@ const Player = ({ palyer }) => {
      const handleChosePlayerBtn = ()=>{
         SetchoseBtn(!ChoseBtn);
      }
-    const { player_name, player_country, player_playing_role, batting_hand, price, img } = palyer
+    const { player_name, player_country, player_playing_role, batting_hand, price, img, rating } = palyer
     return (
         <div>
             <div className="card border border-teal-600">
@@ -17,7 +17,7 @@ const Player = ({ palyer }) => {
                 </figure>
                 <div className="card-body">
                     <h2 className="card-title">{player_name}</h2>
-                    <div className='flex items-center justify-between'>
+                    <div className='flex items-center flex-wrap justify-between border-b-2 border-gray-500 p-2'>
                         <div className='flex'>
                             <img src={flag} alt="" />
                             <p>
@@ -28,7 +28,11 @@ const Player = ({ palyer }) => {
                             <button className='border-2 border-teal-300 p-1 rounded-md'>{player_playing_role}</button>
                         </div>
                     </div>
-                    <h2>Rating</h2>
+                    <div className='flex justify-between font-bold'>
+                        <h2>Rating</h2>
+                        <span>{rating}</span>
+
+                    </div>
                     <div className='flex justify-between'>
                         <h2>
                             {batting_hand}
@@ -41,7 +45,7 @@ const Player = ({ palyer }) => {
                         <h2>
                             Price:${price}
                         </h2>
-                        <button disabled={ChoseBtn} onClick={handleChosePlayerBtn} className={`btn ${ChoseBtn && `bg-green-400`}`}>{ChoseBtn?"Cosed": 'Chose Player'}</button>
+                        <button disabled={ChoseBtn}  onClick={handleChosePlayerBtn} className={`btn border-gray-400 ${ChoseBtn && `bg-green-400`}`}>{ChoseBtn?"Cosed": 'Chose Player'}</button>
                     </div>
                 </div>
             </div>
