@@ -12,7 +12,7 @@ function App() {
   const [countSelect, setCountSelect] = useState(0);
   // use state for storing selected data
   const [selectedData, setSelectedData] = useState([]);
-  const SelectedPlayers = (palyer)=>{
+  const SelectedPlayers = (palyer)=>{``
     const newSelectPlayer = [...selectedData, palyer];
     setSelectedData(newSelectPlayer);
 
