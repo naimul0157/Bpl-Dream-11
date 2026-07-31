@@ -5,7 +5,7 @@ const SelectedPlayers = ({ selectPlayer }) => {
     return (
         <div className="border border-red-500 rounded-2xl flex justify-between items-center py-4 px-3 mb-3">
             <div className='flex gap-5 items-center'>
-                    <img className="w-2/7 rounded-2xl" src={img} alt="" />
+                    <img className="w-[100px] h-[100px] rounded-2xl" src={img} alt="" />
                 <div className=''>
                     <h1 className='font-extrabold text-xl'>
                         {player_name}
