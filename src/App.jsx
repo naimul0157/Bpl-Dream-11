@@ -5,7 +5,8 @@ import Navbar from './components/Navbar/Navbar'
 import AvialablePlayers from './components/AvialabePlayerS/AvialablePlayers';
 import Toggle from './components/Toggle/Toggle';
 import Selected from './components/SelectedPlayers/Selected';
-const PromiseFetchPlayer = fetch('/public/palyers.json').then(res=> res.json());
+import { ToastContainer } from 'react-toastify';
+const PromiseFetchPlayer = fetch('/palyers.json').then(res=> res.json());
 function App() {
   const [toggle, setToggle] = useState(true);
   const[avilableBalance, setAvialableBalance] = useState(10000000);
@@ -21,6 +22,8 @@ function App() {
     const filterData = selectedData.filter(sdt => sdt.player_name!==p.player_name)
     setSelectedData(filterData);
     setCountSelect(filterData.length)
+    const newprice = avilableBalance + p.price;
+    setAvialableBalance(newprice);
   }
   return (
     <>
@@ -32,8 +35,9 @@ function App() {
        <AvialablePlayers PromiseFetchPlayer={PromiseFetchPlayer} setAvialableBalance={setAvialableBalance}
        avilableBalance={avilableBalance} countSelect={countSelect} setCountSelect={setCountSelect}
        SelectedPlayers={SelectedPlayers}></AvialablePlayers>
-    </Suspense> : <Suspense fallback={<span className="loading loading-spinner loading-xl"></span>}><Selected selectedData={selectedData} removeHandle={removeHandle}></Selected></Suspense>
+    </Suspense> : <Suspense fallback={<span className="loading loading-spinner loading-xl"></span>}><Selected selectedData={selectedData} removeHandle={removeHandle} setToggle={setToggle}></Selected></Suspense>
     }
+    <ToastContainer />
     </>
   )
 }
