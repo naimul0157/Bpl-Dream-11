@@ -17,6 +17,11 @@ function App() {
     setSelectedData(newSelectPlayer);
 
   }
+  const removeHandle = (p) =>{
+    const filterData = selectedData.filter(sdt => sdt.player_name!==p.player_name)
+    setSelectedData(filterData);
+    setCountSelect(filterData.length)
+  }
   return (
     <>
     <Navbar avilableBalance={avilableBalance}></Navbar>
@@ -27,7 +32,7 @@ function App() {
        <AvialablePlayers PromiseFetchPlayer={PromiseFetchPlayer} setAvialableBalance={setAvialableBalance}
        avilableBalance={avilableBalance} countSelect={countSelect} setCountSelect={setCountSelect}
        SelectedPlayers={SelectedPlayers}></AvialablePlayers>
-    </Suspense> : <Suspense fallback={<span className="loading loading-spinner loading-xl"></span>}><Selected selectedData={selectedData}></Selected></Suspense>
+    </Suspense> : <Suspense fallback={<span className="loading loading-spinner loading-xl"></span>}><Selected selectedData={selectedData} removeHandle={removeHandle}></Selected></Suspense>
     }
     </>
   )

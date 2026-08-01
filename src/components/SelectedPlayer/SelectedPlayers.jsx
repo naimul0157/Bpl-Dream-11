@@ -1,7 +1,10 @@
 
 import Dustbin from '../../assets/Vector.png'
-const SelectedPlayers = ({ selectPlayer }) => {
+const SelectedPlayers = ({ selectPlayer, removeHandle }) => {
     const { player_name, img, batting_hand } = selectPlayer;
+    const handleRemove = ()=>{
+        removeHandle(selectPlayer);
+    }
     return (
         <div className="border border-red-500 rounded-2xl flex justify-between items-center py-4 px-3 mb-3">
             <div className='flex gap-5 items-center'>
@@ -16,7 +19,7 @@ const SelectedPlayers = ({ selectPlayer }) => {
                 </div>
             </div>
             <div className='w-1/6 flex justify-center'>
-                <img className='cursor-pointer' src={Dustbin} alt=""/>
+                <img onClick={handleRemove} className='cursor-pointer' src={Dustbin} alt=""/>
             </div>
         </div>
     );
